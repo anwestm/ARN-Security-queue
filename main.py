@@ -53,7 +53,7 @@ def parse_tree(html):
             label = entry.find("div", {"class": "terminalLabel"}).text
             queue = entry.find("div", {"class": "terminalQueueTime"}).text
 
-            queue = queue.split(" ")[-1]
+            queue = queue.split(" ")[-2]
             if "-" in queue:
                 queue = queue.split("-")[-1]
 
@@ -90,8 +90,8 @@ web = QWebEngineView()
 
 timer = QTimer()
 timer.timeout.connect(_load_site)
-timer.setInterval(1000 * 60 * 1)
-timer.start(1000 * 60 * 1)
+timer.setInterval(1000 * 60 * 5)
+timer.start(1000 * 60 * 5)
 
 sys.exit(app.exec_())
 
