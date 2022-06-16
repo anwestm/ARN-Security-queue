@@ -1,1 +1,5 @@
 pages/
+launcher.sh
+cronlog
+__pycache__
+

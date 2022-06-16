@@ -41,7 +41,7 @@ driver.get("https://www.swedavia.se/arlanda/sakerhetskontroll/")
 print("Parsing html...")
 scraper.parse_tree(driver.page_source)
 
-schedule.every(5).minutes.do(reload_site)
+schedule.every(1).minutes.do(reload_site)
 while True:
     schedule.run_pending()
     time.sleep(1)
